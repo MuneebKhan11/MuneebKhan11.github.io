@@ -5,70 +5,186 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn More | Muhammad Khan Portfolio</title>
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript>
-        <link rel="stylesheet" href="assets/css/noscript.css" />
-    </noscript>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Header */
+        .site-header {
+            background: #333;
+            color: #fff;
+            padding-top: 20px;
+            min-height: 70px;
+            text-align: center;
+            /* Center logo and navigation */
+        }
+
+        .site-header .logo,
+        .site-header .main-navigation {
+            display: inline-block;
+            /* Display inline for vertical alignment */
+            margin: 0;
+            /* Remove margin for tight spacing */
+            padding: 0;
+            /* Remove padding for alignment */
+            text-align: center;
+            /* Ensure text is centered */
+        }
+
+        .site-header .logo {
+            text-decoration: none;
+            color: #fff;
+            font-size: 24px;
+            display: block;
+            /* Make the logo block to fill space */
+        }
+
+        .main-navigation ul {
+            padding: 0;
+            list-style: none;
+            margin: 10px 0 0;
+            /* Adjust spacing between logo and navigation */
+        }
+
+        .main-navigation ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .main-navigation ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #e2e2e2;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        /* Content Sections */
+        .section-content {
+            padding: 20px 0;
+        }
+
+        .content-block {
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        .site-footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            .main-navigation ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+        /* add more styles here */
+
+    </style>
 </head>
 
 <body class="is-preload">
-    <!-- Header -->
-    <header id="header">
-        <a href="index.html" class="logo">Muhammad Khan</a>
-    </header>
 
-    <!-- Nav -->
-    <nav id="menu">
-        <ul class="links">
-            <li><a href="index.html">Home</a></li>
-        </ul>
-    </nav>
+        <!-- Header -->
+        <header id="header" class="site-header">
+            <div class="container">
+                <a href="index.html" class="logo">Muhammad Muneeb Khan</a>
+                <!-- Navigation -->
+                <nav id="nav-main" class="main-navigation">
+                    <ul>
+                    <b>
+                        <li><a href="index.html">Home</a></li>
+                        </b>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
     <!-- Main -->
     <section id="main" class="wrapper">
         <div class="inner">
             <header class="major">
                 <h1>Learn More</h1>
+                <b>
                 <p>Find out more about my journey, experiences, and the motivation behind my work.</p>
+                </b>
             </header>
             <section>
                 <h2>My Journey</h2>
-                <p>My passion for computer science began when I first learned to code in high school. I was fascinated by the endless possibilities that technology offered, and I quickly realized that I wanted to pursue a career in this field. I went on to study Computer Science at Nottingham Trent University, where I deepened my knowledge in various programming languages and technologies.</p>
+                <p>My passion for computer science began when I first learned to code in high school. I was fascinated by
+                    the endless possibilities that technology offered, and I quickly realized that I wanted to pursue a
+                    career in this field. I went on to study Computer Science at Nottingham Trent University, where I
+                    deepened my knowledge in various programming languages and technologies.</p>
             </section>
             <section>
                 <h2>Experiences and Achievements</h2>
-                <p>During my time at university, I completed several courses, where I gained hands-on experience in software development and project management. Additionally, I have worked on numerous personal and group projects, which have allowed me to further develop my skills in web development, data analysis, and artificial intelligence. Some of my most notable achievements include winning the 2022 Discord Hackathon.</p>
-            </sectiection>
+                <p>During my time at university, I completed several courses, where I gained hands-on experience in software
+                    development and project management. Additionally, I have worked on numerous personal and group projects,
+                    which have allowed me to further develop my skills in web development, data analysis, and artificial
+                    intelligence. Some of my most notable achievements include winning the 2022 Discord Hackathon.</p>
+                </sectiection>
                 <h2>Motivation</h2>
-                <p>My motivation to continually grow and learn as a computer scientist comes from my desire to create innovative solutions to real-world problems. I believe that technology has the power to transform lives and positively impact the world, and I am driven by the opportunity to contribute to this process. By staying up-to-date with the latest industry trends and continually expanding my skill set, I hope to make a meaningful impact through my work and inspire others to do the same.</p>
+                <p>My motivation to continually grow and learn as a computer scientist comes from my desire to create
+                    innovative solutions to real-world problems. I believe that technology has the power to transform lives
+                    and positively impact the world, and I am driven by the opportunity to contribute to this process. By
+                    staying up-to-date with the latest industry trends and continually expanding my skill set, I hope to
+                    make a meaningful impact through my work and inspire others to do the same.</p>
             </section>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="footer" class="wrapper style1-alt">
-        <div class="inner">
-            <ul class="menu">
+    <footer id="footer" class="site-footer">
+        <div class="container">
+
+            <ul class="footer-links">
                 <li>&copy; All rights reserved.</li>
                 <li>Design: <a href="https://github.com/MuneebKhan11">Muhammad Khan</a></li>
             </ul>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-   
-
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-
 </body>
+
 </html>
