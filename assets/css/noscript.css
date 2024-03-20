@@ -1,43 +1,96 @@
-/*
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+/* Base enhancements for better visuals and interactivity */
 
-/* Spotlights */
+/* Use a smooth transition effect for all elements */
+* {
+	transition: all 0.3s ease-in-out;
+}
 
-	.spotlights > section > .image:before {
-		opacity: 0 !important;
-	}
+/* Spotlights Section Enhancements */
+.spotlights>section>.image:before {
+	opacity: 0 !important;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+	border-radius: 5px;
+}
 
-	.spotlights > section > .content > .inner {
-		-moz-transform: none !important;
-		-webkit-transform: none !important;
-		-ms-transform: none !important;
-		transform: none !important;
-		opacity: 1 !important;
-	}
+.spotlights>section>.content>.inner {
+	-moz-transform: translateY(-10px) !important;
+	-webkit-transform: translateY(-10px) !important;
+	-ms-transform: translateY(-10px) !important;
+	transform: translateY(-10px) !important;
+	opacity: 1 !important;
+	background: rgba(255, 255, 255, 0.8);
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-/* Wrapper */
+.spotlights>section:hover>.content>.inner {
+	-moz-transform: translateY(-15px) !important;
+	-webkit-transform: translateY(-15px) !important;
+	-ms-transform: translateY(-15px) !important;
+	transform: translateY(-15px) !important;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
 
-	.wrapper > .inner {
-		opacity: 1 !important;
-		-moz-transform: none !important;
-		-webkit-transform: none !important;
-		-ms-transform: none !important;
-		transform: none !important;
-	}
+/* Wrapper Enhancements */
+.wrapper>.inner {
+	opacity: 1 !important;
+	background: #ffffff;
+	/* Light background for the inner wrapper */
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
 
-/* Sidebar */
+/* Sidebar Enhancements */
+#sidebar>.inner {
+	opacity: 1 !important;
+	background: #f8f8f8;
+	/* Slightly different background for sidebar */
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
 
-	#sidebar > .inner {
-		opacity: 1 !important;
-	}
+#sidebar nav>ul>li {
+	-moz-transform: none !important;
+	-webkit-transform: none !important;
+	-ms-transform: none !important;
+	transform: none !important;
+	opacity: 1 !important;
+	background: linear-gradient(145deg, #ffffff, #e6e6e6);
+	margin-bottom: 10px;
+	padding: 10px 15px;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-	#sidebar nav > ul > li {
-		-moz-transform: none !important;
-		-webkit-transform: none !important;
-		-ms-transform: none !important;
-		transform: none !important;
-		opacity: 1 !important;
-	}
+#sidebar nav>ul>li:hover {
+	background: linear-gradient(145deg, #f9f9f9, #dddddd);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Improving legibility and aesthetics of text */
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+	color: #444;
+}
+
+a {
+	color: #06f;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}

@@ -1,11 +1,4 @@
 @import url(fontawesome-all.min.css);
-
-/*
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -1818,40 +1811,59 @@ input, select, textarea {
 
 /* Button */
 
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
-	button,
-	.button {
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		-ms-appearance: none;
-		appearance: none;
-		-moz-transition: border-color 0.2s ease;
-		-webkit-transition: border-color 0.2s ease;
-		-ms-transition: border-color 0.2s ease;
-		transition: border-color 0.2s ease;
-		background-color: transparent;
-		border: solid 1px !important;
-		border-color: rgba(255, 255, 255, 0.15) !important;
-		border-radius: 3em;
-		color: #ffffff !important;
-		cursor: pointer;
-		display: inline-block;
-		font-size: 0.6em;
-		font-weight: bold;
-		height: calc(4.75em + 2px);
-		letter-spacing: 0.25em;
-		line-height: 4.75em;
-		outline: 0;
-		padding: 0 3.75em;
-		position: relative;
-		text-align: center;
-		text-decoration: none;
-		text-transform: uppercase;
-		white-space: nowrap;
-	}
-
+		/* Enhanced Button Styles */
+	
+				.button {
+					-moz-appearance: none;
+					-webkit-appearance: none;
+					-ms-appearance: none;
+					appearance: none;
+					-moz-transition: all 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+					-webkit-transition: all 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+					-ms-transition: all 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+					transition: all 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+					background-color: #007bff;
+					/* A vibrant blue background color */
+					color: #ffffff;
+					/* White text for contrast */
+					border: solid 2px #007bff;
+					/* Border color matches the background */
+					border-radius: 3em;
+					cursor: pointer;
+					display: inline-block;
+					font-size: 0.6em;
+					font-weight: bold;
+					height: calc(4.75em + 2px);
+					letter-spacing: 0.25em;
+					line-height: 4.75em;
+					outline: 0;
+					padding: 0 3.75em;
+					position: relative;
+					text-align: center;
+					text-decoration: none;
+					text-transform: uppercase;
+					white-space: nowrap;
+					box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+					/* Subtle shadow for depth */
+				}
+		
+				.button:hover,
+				.button:focus {
+					border-color: rgba(255, 255, 255, 0.55);
+					box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+					/* Enhanced shadow on hover/focus */
+					background-color: #0056b3;
+					/* Slightly darker blue on hover/focus for depth */
+					color: #ffffff;
+					/* Maintains white text for contrast */
+				}
+		
+				.button:active {
+					transform: translateY(2px);
+					/* Simulates a button press */
+					box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+					/* Adjusts shadow to give a "pressed" effect */
+				}
 		input[type="submit"]:after,
 		input[type="reset"]:after,
 		input[type="button"]:after,
@@ -1876,105 +1888,113 @@ input, select, textarea {
 			top: 0;
 			width: 100%;
 		}
-
-		input[type="submit"].icon:before,
-		input[type="reset"].icon:before,
-		input[type="button"].icon:before,
-		button.icon:before,
-		.button.icon:before {
-			margin-right: 0.75em;
-		}
-
-		input[type="submit"].fit,
-		input[type="reset"].fit,
-		input[type="button"].fit,
-		button.fit,
-		.button.fit {
-			width: 100%;
-		}
-
-		input[type="submit"].small,
-		input[type="reset"].small,
-		input[type="button"].small,
-		button.small,
-		.button.small {
-			font-size: 0.4em;
-		}
-
-		input[type="submit"].large,
-		input[type="reset"].large,
-		input[type="button"].large,
-		button.large,
-		.button.large {
-			font-size: 0.8em;
-		}
-
-		input[type="submit"].primary,
-		input[type="reset"].primary,
-		input[type="button"].primary,
-		button.primary,
-		.button.primary {
-			background-color: #ffffff;
-			color: #312450 !important;
-		}
-
-			input[type="submit"].primary:after,
-			input[type="reset"].primary:after,
-			input[type="button"].primary:after,
-			button.primary:after,
-			.button.primary:after {
-				display: none;
-			}
-
-		input[type="submit"].disabled, input[type="submit"]:disabled,
-		input[type="reset"].disabled,
-		input[type="reset"]:disabled,
-		input[type="button"].disabled,
-		input[type="button"]:disabled,
-		button.disabled,
-		button:disabled,
-		.button.disabled,
-		.button:disabled {
-			cursor: default;
-			opacity: 0.5;
-			pointer-events: none;
-		}
-
+	
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			border-color: rgba(255, 255, 255, 0.55) !important;
+			border-color: rgba(255, 255, 255, 0.55);
+			box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 		}
-
-			input[type="submit"]:hover:after,
-			input[type="reset"]:hover:after,
-			input[type="button"]:hover:after,
-			button:hover:after,
-			.button:hover:after {
-				opacity: 0.05;
-				-moz-transform: scale(1);
-				-webkit-transform: scale(1);
-				-ms-transform: scale(1);
-				transform: scale(1);
+	
+		input[type="submit"]:hover:after,
+		input[type="reset"]:hover:after,
+		input[type="button"]:hover:after,
+		button:hover:after,
+		.button:hover:after {
+			opacity: 0.05;
+			-moz-transform: scale(1);
+			-webkit-transform: scale(1);
+			-ms-transform: scale(1);
+			transform: scale(1);
+		}
+	
+		input[type="submit"]:hover:active,
+		input[type="reset"]:hover:active,
+		input[type="button"]:hover:active,
+		button:hover:active,
+		.button:hover:active {
+			border-color: #ffffff;
+			box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+		}
+	
+		input[type="submit"]:hover:active:after,
+		input[type="reset"]:hover:active:after,
+		input[type="button"]:hover:active:after,
+		button:hover:active:after,
+		.button:hover:active:after {
+			opacity: 0.1;
+		}
+	
+		/* Additional Styles for Different Button Types */
+		.button.primary {
+			background-color: #ffffff;
+			color: #312450 !important;
+		}
+	
+		.button.primary:after {
+			display: none;
+		}
+	
+		.button.disabled,
+		.button:disabled {
+			cursor: default;
+			opacity: 0.5;
+			pointer-events: none;
 			}
-
-			input[type="submit"]:hover:active,
-			input[type="reset"]:hover:active,
-			input[type="button"]:hover:active,
-			button:hover:active,
-			.button:hover:active {
-				border-color: #ffffff !important;
+			
+			/* Size Variants */
+			.button.small {
+				font-size: 0.4em;
+				height: calc(3.5em + 2px);
+				line-height: 3.5em;
 			}
+			
+			.button.large {
+				font-size: 0.8em;
+				height: calc(5.5em + 2px);
+				line-height: 5.5em;
+			}
+			
+			/* Fit Button to Container */
+			.button.fit {
+				width: 100%;
+			}
+			
+			/* Icon Button Adjustments */
+			.button.icon:before {
+				margin-right: 0.75em;
+			}
+			
+			/* Improved Visual Feedback for User Interaction */
+			.button:not(.disabled):not(:disabled):focus,
+			.button:not(.disabled):not(:disabled):active {
+				outline: none;
+				border-color: rgba(255, 255, 255, 0.85);
+				box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+			}
+						.button:not(.disabled):not(:disabled):focus:after,
+						.button:not(.disabled):not(:disabled):active:after {
+							opacity: 0.15;
+							transform: scale(1);
+						}
 
-				input[type="submit"]:hover:active:after,
-				input[type="reset"]:hover:active:after,
-				input[type="button"]:hover:active:after,
-				button:hover:active:after,
-				.button:hover:active:after {
-					opacity: 0.1;
-				}
+												/* Enhancements for Hover and Active States */
+												.button:not(.disabled):not(:disabled):hover {
+													text-decoration: none;
+													border-color: rgba(255, 255, 255, 0.65);
+													box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+												}
+																								.button:not(.disabled):not(:disabled):hover:after {
+																									opacity: 0.05;
+																									transform: scale(1.025);
+																								}
+												
+																								.button:not(.disabled):not(:disabled):active {
+																									transform: translateY(2px);
+																									box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+																								}
 
 /* Features */
 
@@ -3905,5 +3925,7 @@ input, select, textarea {
 			#intro {
 				background-attachment: scroll;
 			}
+			
+			
 
 		}
