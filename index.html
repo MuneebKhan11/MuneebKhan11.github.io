@@ -1,15 +1,80 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 
 <head>
 	<title>Muhammad Khan | Portfolio</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+	<style>
+		.typewriter h1 {
+			overflow: hidden;
+			border-right: .15em solid orange;
+			white-space: nowrap;
+			margin: 0 auto;
+			letter-spacing: .15em;
+			animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
+		}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		@keyframes blink-caret {
+
+			from,
+			to {
+				border-color: transparent;
+			}
+
+			50% {
+				border-color: orange;
+			}
+		}
+
+		.fun-fact {
+			background: #f4f4f4;
+			padding: 20px;
+			border-radius: 10px;
+			margin: 20px 0;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			transition: transform 0.3s ease;
+		}
+
+		.fun-fact:hover {
+			transform: scale(1.05);
+		}
+
+		#easter-egg {
+			display: none;
+			background: #f0e68c;
+			padding: 20px;
+			border-radius: 10px;
+			text-align: center;
+			margin-top: 20px;
+			animation: reveal 0.5s ease-in-out;
+		}
+
+		@keyframes reveal {
+			from {
+				opacity: 0;
+				transform: scale(0.5);
+			}
+
+			to {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+	</style>
 </head>
 
 <body class="is-preload">
@@ -22,7 +87,8 @@
 					<li><a href="#intro">Welcome</a></li>
 					<li><a href="#one">About Me</a></li>
 					<li><a href="#two">My Work</a></li>
-					<li><a href="#resume">Resume</a></li> <!-- Resume link added -->
+					<li><a href="#fun-facts">Fun Facts</a></li>
+					<li><a href="#resume">Resume</a></li>
 					<li><a href="#three">Contact</a></li>
 				</ul>
 			</nav>
@@ -35,240 +101,246 @@
 		<!-- Intro -->
 		<section id="intro" class="wrapper style1 fullscreen fade-up">
 			<div class="inner">
-				<h1>Muhammad Muneeb Khan</h1>
-				<p>Welcome to my portfolio! I'm a dedicated Software Engineer at Citi Bank, Nottingham Trent University graduate, and a self-taught programmer
-					fueled by a passion for coding and enhancing problem-solving skills.</p>
-				<p>Computers were invented to tackle new kinds of problems. Today, programmers like me are here to solve
-					these evolving challenges.</p>
-				<p>While many enjoy the marvels of modern computing and gaming, a select few are driven to contribute to
-					this digital revolution. I proudly call myself one of these programmers.</p>
+				<div class="typewriter">
+					<h1>Welcome to Muhammad's Portfolio</h1>
+				</div>
+				<p>Hello! I'm Muhammad Muneeb Khan, a Software Engineer at Citi Bank, a graduate of Nottingham Trent
+					University, and a passionate self-taught programmer. I thrive on solving complex problems and
+					continuously improving my coding skills.</p>
+				<p>Computers were invented to solve new types of problems. Today, it's the programmers like me who
+					tackle these ever-evolving challenges.</p>
+				<p>While many enjoy the wonders of modern computing and gaming, a select few, like myself, are driven to
+					contribute to this digital revolution.</p>
 				<p>Discover my journey, achievements, and aspirations below.</p>
 				<ul class="actions">
-					<li><a href="generic.html" class="button scrolly">Discover More</a></li>
+					<li><a href="generic.html" class="button" title="Visit this page and click the Astronaut">Discover More</a></li>				</ul>
+			</div>
+		</section>
+
+		<!-- About Me -->
+		<section id="one" class="wrapper style2 spotlights">
+			<section>
+				<a href="#" class="image"><img src="images/pic1.png" alt="" data-position="center center" /></a>
+				<div class="content">
+					<div class="inner">
+						<h2>Introduction</h2>
+						<p>My fascination with computers started at a very young age. I was curious about how they work
+							and what goes on in the background, which led me to programming. This curiosity extends to
+							understanding the logic behind technology around me.</p>
+						<ul class="actions">
+							<li><a href="generic.html" class="button">Learn more</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section>
+				<a href="#" class="image"><img src="images/pic2.jpg" alt="" data-position="top center" /></a>
+				<div class="content">
+					<div class="inner">
+						<h2>Why Computer Science?</h2>
+						<p>My love for computers drove me to learn more about them. As a child, while others dreamed of
+							becoming pilots or doctors, I was drawn to computers and technology. Now, I am pursuing a
+							deeper understanding of what happens behind the scenes.</p>
+						<ul class="actions">
+							<li><a href="generic.html" class="button">Learn more</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section>
+				<a href="#" class="image"><img src="images/pic3.png" alt="" data-position="25% 25%" /></a>
+				<div class="content">
+					<div class="inner">
+						<h2>Goals</h2>
+						<ul>
+							<li>Enhance problem-solving skills</li>
+							<li>Achieve proficient programming</li>
+							<li>Gain deep knowledge of computer systems</li>
+							<li>Understand the interplay between theory and practice</li>
+							<li>Contribute to projects that improve lives</li>
+						</ul>
+						<ul class="actions">
+							<li><a href="generic.html" class="button">Learn more</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</section>
+
+		<!-- My Work -->
+		<section id="two" class="wrapper style3 fade-up">
+			<div class="inner">
+				<h2>Personal Projects</h2>
+				<p>Exploring the world of coding has allowed me to create innovative solutions. Below are some projects
+					I've passionately developed, showcasing my skills and creativity.</p>
+				<div class="features">
+					<section>
+						<span class="icon solid major fa-cloud"></span>
+						<h3><a href="https://github.com/MuneebKhan11/Cloud-Based-File-Server-GUI-App"
+								target="_blank">Cloud-Based File Server GUI App</a></h3>
+						<p>Developed a multi-platform desktop GUI app for cloud-based file server access, supporting
+							Windows, macOS, and Linux.</p>
+						<ul>
+							<li>Logging and metrics collection for high availability</li>
+							<li>Comprehensive file management system</li>
+							<li>Advanced containerization techniques</li>
+						</ul>
+					</section>
+					<section>
+						<span class="icon solid major fa-chart-line"></span>
+						<h3><a href="https://github.com/MuneebKhan11/Machine-Learning-Analysis-of-New-Coder-Survey-Data"
+								target="_blank">Machine Learning Analysis of New Coder Survey Data</a></h3>
+						<p>Conducted an in-depth analysis of the “2018 freeCodeCamp New Coder Survey” using advanced
+							machine learning algorithms.</p>
+						<ul>
+							<li>Model accuracies between 80.10% and 82.96%</li>
+							<li>Optimized for precision and recall</li>
+						</ul>
+					</section>
+					<section>
+						<span class="icon solid major fa-truck"></span>
+						<h3><a href="https://github.com/MuneebKhan11/E-Transport-Marketplace"
+								target="_blank">E-Transport Marketplace</a></h3>
+						<p>Engineered a platform with real-time monitoring capabilities for efficient cargo tracking.
+						</p>
+						<ul>
+							<li>Real-time communication with MQTT protocol</li>
+							<li>State-of-the-art encryption technologies</li>
+						</ul>
+					</section>
+					<section>
+						<span class="icon solid major fa-code"></span>
+						<h3><a href="https://github.com/MuneebKhan11/Login-Register-C-.git" target="_blank">Registration
+								and Sign In Form with GUI</a></h3>
+						<p>Developed a secure authentication and registration system using C++ for backend logic and
+							JavaScript for front-end interaction.</p>
+						<ul>
+							<li>Focused on security and efficiency</li>
+							<li>User-friendly design</li>
+						</ul>
+					</section>
+				</div>
+				<ul class="actions">
+					<li><a href="generic.html" class="button">Learn more</a></li>
 				</ul>
 			</div>
 		</section>
 
-				<!-- One -->
-					<section id="one" class="wrapper style2 spotlights">
-						<section>
-							<a href="#" class="image"><img src="images/pic1.png" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Introduction</h2>
-									<p>I was keen to use computers from a very young age, later it made me think how does this thing work what goes on in background? And it led to programming but not just that it makes me think about logic of the things and technology around me.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/pic2.jpg" alt="" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Why Computer Science?</h2>
-									<p>When you're in love with something you want to know more about it so, was the case with me. I'm learning what goes in the background now.</p>
-									<p>Some want to be a pilot and some doctors but since I was a toddler I was interested in computers and tech related stuff. </p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/pic3.png" alt="" data-position="25% 25%" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Goals</h2>
-									<ul>
-									<li>A better problem solving thinking</li>
-									<li>Proficient programming</li>
-									<li>Deep knowledge of computer working</li>
-									<li>Understanding interplay between Theory and Practical</li>
-									<li>Contributing to something that improves the life</li>
-
-								</ul>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-					</section>
-<!-- Two -->
-<section id="two" class="wrapper style3 fade-up">
-	<div class="inner">
-		<h2>Personal Projects</h2>
-		<p>Exploring the realm of coding unlocks the potential to create innovative solutions. Below are a selection of
-			projects I've passionately worked on, leveraging my skills to bring ideas to life.</p>
-		<div class="features">
-			<section>
-				<span class="icon solid major fa-code"></span>
-				<h3><a href="https://github.com/MuneebKhan11/Login-Register-C-.git">Registration and Sign In Form with
-						GUI</a></h3>
-				<p>This project, developed in C++, interfaces with a SQL server to manage data, offering functionalities
-					such as:</p>
-				<ul>
-					<li>Login and registration</li>
-					<li>Credential validation</li>
-					<li>Mandatory field completion</li>
-				</ul>
-			</section>
-			<section>
-				<span class="icon solid major fa-cog"></span>
-				<h3><a href="https://github.com/MuneebKhan11/Hotel-Management.git">Hotel Management System</a></h3>
-				<p>A C++ application enabling hotel management through functions like:</p>
-				<ul>
-					<li>Room booking</li>
-					<li>Booking cancellation</li>
-					<li>Record checking</li>
-					<li>Status updates</li>
-				</ul>
-			</section>
-			<section>
-				<span class="icon solid major fa-desktop"></span>
-				<h3><a href="https://github.com/MuneebKhan11/Snake-Game.git">Snake Game</a></h3>
-				<p>A Python-based game featuring a graphical interface, score tracking, and adjustable resolution for an
-					immersive gaming experience.</p>
-			</section>
-			<section>
-				<span class="icon solid major fa-lock"></span>
-				<h3><a href="https://github.com/MuneebKhan11/Text-Encoding-Decoding.git">Text Cypher</a></h3>
-				<p>An encryption tool written in Python that secures text with a key. Decryption is key-dependent,
-					ensuring that only authorized users can access the information.</p>
-			</section>
-			<section>
-				<span class="icon solid major fa-link"></span>
-				<h3><a href="https://github.com/MuneebKhan11/Amazon-URL-Scrapper.git">Amazon URL Scraper</a></h3>
-				<p>This script extracts essential product details from Amazon, including:</p>
-				<ul>
-					<li>Product title</li>
-					<li>Price</li>
-					<li>Reviews</li>
-					<li>Availability status</li>
-				</ul>
-			</section>
-			<section>
-				<span class="icon major fa-gem"></span>
-				<h3><a href="https://github.com/MuneebKhan11/Password-Generator.git">Random Strong Password
-						Generator</a></h3>
-				<p>A versatile Python script for generating secure passwords with features like:</p>
-				<ul>
-					<li>Customizable password creation</li>
-					<li>Character modification options</li>
-					<li>Adjustable password length</li>
-				</ul>
-			</section>
-		</div>
-		<ul class="actions">
-			<li><a href="https://github.com/MuneebKhan11" class="button">Learn More</a></li>
-		</ul>
-	</div>
-</section>
-
-
-
-					<!-- Resume Section -->
-					<section id="resume" class="wrapper style2 spotlights">
-						<div class="inner">
-							<h2>My Resume</h2>
-							<p>Explore my professional journey and the milestones I've achieved along the way. Click below to download my
-								full resume and get a closer look at my qualifications and experiences.</p>
-							<ul class="actions">
-								<li><a href="assets/files/resume.pdf" class="button" download="Muhammad_Khan_Resume.pdf">Download Resume</a>
-								</li>
-							</ul>
-						</div>
-					</section>
-
-
-
-
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Contact Me</h2>
-
-							<h3></h3>
-							<p></p>
-							<div class="split style1">
-								<section>
-									<form action="https://formspree.io/f/xvoyvnvw" method="POST">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name </label>
-												<input type="text" name="name" id="name" required />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" required />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5" required></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
-								</section>
-								<section>
-									<ul class="contact">
-										
-										<li>
-											<h3>Email</h3>
-											<a href="">Muneebkhan8666@gmail.com</a>
-										</li>
-										<li>
-											<h3>Phone</h3>
-											<span>+44 7453289274</span>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<li><a href="https://twitter.com/MuneebK63228839" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="http://www.facebook.com/muneeb420" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-												<li><a href="https://github.com/MuneebKhan11" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-												<li><a href="http://www.instagram.com/muneebixh" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-												<li><a href="https://www.linkedin.com/in/khanmuneeb786/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
-
-			</div>
-
-		<!-- Footer -->
-		<footer id="footer" class="wrapper style1-alt">
+		<!-- Fun Facts -->
+		<section id="fun-facts" class="wrapper style1 fade-up">
 			<div class="inner">
-				<ul class="menu">
-					<li>&copy; All rights reserved.</li>
-					<li>Design: <a href="https://github.com/MuneebKhan11">Muhammad Khan</a></li>
+				<h2>Fun Facts</h2>
+				<div class="fun-fact" data-aos="zoom-in">
+					<i class="fas fa-gamepad fa-3x"></i>
+					<p>I’m an avid gamer! When I’m not coding, you’ll often find me immersed in the latest video games,
+						sharpening my strategic thinking skills.</p>
+				</div>
+				<div class="fun-fact" data-aos="zoom-in" data-aos-delay="200">
+					<i class="fas fa-microphone-alt fa-3x"></i>
+					<p>Did you know? I once hosted a tech podcast where I discussed the latest trends in software
+						development and interviewed industry experts.</p>
+				</div>
+				<div class="fun-fact" data-aos="zoom-in" data-aos-delay="400">
+					<i class="fas fa-rocket fa-3x"></i>
+					<p>Space enthusiast alert! I’m fascinated by space exploration and spend my free time reading about
+						the cosmos and watching space documentaries.</p>
+				</div>
+				<button onclick="revealEasterEgg()">Click me for a surprise!</button>
+				<div id="easter-egg">
+					<h3>You've discovered the Easter Egg!</h3>
+					<p>Keep exploring and pushing the boundaries of what's possible. The sky is not the limit; it's just
+						the beginning!</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Resume -->
+		<section id="resume" class="wrapper style2 fade-up">
+			<div class="inner">
+				<h2>Download My Resume</h2>
+				<p>Get a comprehensive overview of my skills, experience, and accomplishments by downloading my resume.
+				</p>
+				<ul class="actions">
+					<li><a href="Muhammad_Resume.pdf" class="button">Download Resume</a></li>
 				</ul>
 			</div>
-		</footer>
-		
-		<!-- Scripts for AOS and other functionalities -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-		<script>
-			AOS.init({
-				easing: 'ease-out-back',
-				duration: 1000
+		</section>
+
+		<!-- Contact -->
+		<section id="three" class="wrapper style1 fade-up">
+			<div class="inner">
+				<h2>Contact</h2>
+				<p>Feel free to reach out to me for collaborations, questions, or just to say hello!</p>
+				<div class="split style1">
+					<section>
+						<form method="post" action="https://formspree.io/f/xwkzgebp">
+							<div class="fields">
+								<div class="field half">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" required />
+								</div>
+								<div class="field half">
+									<label for="email">Email</label>
+									<input type="email" name="_replyto" id="email" required />
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="5" required></textarea>
+								</div>
+							</div>
+							<ul class="actions">
+								<li><input type="submit" value="Send Message" class="button primary" /></li>
+							</ul>
+						</form>
+					</section>
+					<section>
+						<ul class="contact">
+							<li>
+								<h3>Email</h3>
+								<a href="mailto:muneebkhan4674@gmail.com">muneebkhan4674@gmail.com</a>
+							</li>
+							<li>
+								<h3>GitHub</h3>
+								<a href="https://github.com/MuneebKhan11" target="_blank">github.com/MuneebKhan11</a>
+							</li>
+							<li>
+								<h3>LinkedIn</h3>
+								<a href="https://www.linkedin.com/in/khanmuneeb786/"
+									target="_blank">linkedin.com/in/khanmuneeb786</a>
+							</li>
+						</ul>
+					</section>
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init();
+
+		function revealEasterEgg() {
+			document.getElementById('easter-egg').style.display = 'block';
+		}
+
+		document.querySelectorAll('.button.scrolly').forEach(button => {
+			button.addEventListener('click', (event) => {
+				event.preventDefault();
+				const target = button.getAttribute('href');
+				document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
 			});
-		</script>
-		
-		</body>
-		
-		</html>
+		});
+	</script>
+
+</body>
+
+</html>

@@ -1,190 +1,437 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn More | Muhammad Khan Portfolio</title>
-    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Muneeb's Cosmic Adventure Hub 🚀</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body,
-        html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            color: #333;
-            line-height: 1.6;
+        :root {
+            --space-purple: #6C63FF;
+            --cosmic-blue: #00ff9d;
+            --star-white: #ffffff;
+            --deep-space: #1a1a2e;
+            --nebula-pink: #ff0099;
+            --duration: 3s;
+            --translateX: 0px;
+            --translateY: 0px;
         }
 
-        .container {
-            width: 80%;
-            margin: auto;
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--deep-space);
+            font-family: 'Segoe UI', sans-serif;
+            color: var(--star-white);
+            overflow-x: hidden;
+            perspective: 1000px;
+        }
+
+        .space-background {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite ease-in-out;
+        }
+
+        .cosmic-header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
             overflow: hidden;
         }
 
-        /* Header */
-        .site-header {
-            background: #333;
-            color: #fff;
-            padding-top: 20px;
-            min-height: 70px;
+        .floating-astronaut {
+            position: absolute;
+            width: 150px;
+            animation: float 6s infinite ease-in-out;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .floating-astronaut:hover {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        .cosmic-title {
+            font-size: 5rem;
             text-align: center;
-            /* Center logo and navigation */
+            background: linear-gradient(45deg, var(--cosmic-blue), var(--nebula-pink));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 20px rgba(108, 99, 255, 0.5);
+            animation: pulse 2s infinite;
         }
 
-        .site-header .logo,
-        .site-header .main-navigation {
-            display: inline-block;
-            /* Display inline for vertical alignment */
-            margin: 0;
-            /* Remove margin for tight spacing */
-            padding: 0;
-            /* Remove padding for alignment */
-            text-align: center;
-            /* Ensure text is centered */
+        .portal-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            padding: 2rem;
+            perspective: 1000px;
         }
 
-        .site-header .logo {
-            text-decoration: none;
-            color: #fff;
-            font-size: 24px;
-            display: block;
-            /* Make the logo block to fill space */
+        .portal-card {
+            position: relative;
+            height: 300px;
+            background: rgba(108, 99, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            transform-style: preserve-3d;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .main-navigation ul {
-            padding: 0;
-            list-style: none;
-            margin: 10px 0 0;
-            /* Adjust spacing between logo and navigation */
+        .portal-card:hover {
+            transform: translateZ(50px) rotateX(10deg) rotateY(10deg);
         }
 
-        .main-navigation ul li {
-            display: inline;
-            margin: 0 10px;
+        .portal-content {
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
         }
 
-        .main-navigation ul li a {
-            text-decoration: none;
-            color: #fff;
+        .portal-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                    from 0deg,
+                    transparent,
+                    var(--cosmic-blue),
+                    var(--nebula-pink),
+                    transparent
+            );
+            animation: rotate 4s linear infinite;
         }
 
-        /* Hero Section */
-        .hero {
-            background: #e2e2e2;
-            padding: 40px 0;
-            text-align: center;
+        .home-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 1rem 2rem;
+            background: transparent;
+            border: 2px solid var(--cosmic-blue);
+            color: var(--cosmic-blue);
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 1000;
         }
 
-        .hero h1 {
-            margin: 0;
-            font-size: 40px;
+        .home-button:hover {
+            background: var(--cosmic-blue);
+            color: var(--deep-space);
+            box-shadow: 0 0 20px var(--cosmic-blue);
         }
 
-        /* Content Sections */
-        .section-content {
-            padding: 20px 0;
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
         }
 
-        .content-block {
-            margin-bottom: 20px;
+        .cosmic-element {
+            position: absolute;
+            font-size: 2rem;
+            animation: floatAround 10s infinite linear;
         }
-
-        /* Footer */
-        .site-footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        .footer-links {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer-links li a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .container {
-                width: 95%;
+        @keyframes particle {
+            0% {
+                transform: translate(0, 0);
+                opacity: 1;
             }
-
-            .main-navigation ul li {
-                display: block;
-                margin: 10px 0;
+            100% {
+                transform: translate(calc(var(--vx) * 20), calc(var(--vy) * 20));
+                opacity: 0;
             }
         }
-        /* add more styles here */
 
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-30px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes floatAround {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            100% {
+                transform: translate(100px, 100px) rotate(360deg);
+            }
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.2; }
+        }
+
+        .particle-overlay {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        .particle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: var(--cosmic-blue);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .achievement-galaxy {
+            position: relative;
+            padding: 4rem 2rem;
+            background: radial-gradient(circle at center, var(--space-purple), transparent);
+        }
+
+        .rocket-progress {
+            position: fixed;
+            right: 20px;
+            height: 100vh;
+            width: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+        }
+
+        .rocket {
+            position: absolute;
+            right: -10px;
+            font-size: 2rem;
+            transform: rotate(-90deg);
+            transition: top 0.3s ease;
+        }
     </style>
 </head>
+<body>
+<a href="index.html" class="home-button">
+    <i class="fas fa-rocket"></i> Back to Earth
+</a>
 
-<body class="is-preload">
+<div class="space-background"></div>
+<div class="particle-overlay"></div>
+<div class="rocket-progress">
+    <div class="rocket">🚀</div>
+</div>
 
-        <!-- Header -->
-        <header id="header" class="site-header">
-            <div class="container">
-                <a href="index.html" class="logo">Muhammad Muneeb Khan</a>
-                <!-- Navigation -->
-                <nav id="nav-main" class="main-navigation">
-                    <ul>
-                    <b>
-                        <li><a href="index.html">Home</a></li>
-                        </b>
-                    </ul>
-                </nav>
+<main>
+    <section class="cosmic-header">
+        <img src="images/astronaut.png" alt="Floating Astronaut" class="floating-astronaut" id="mascot">
+        <h1 class="cosmic-title">Muneeb's Cosmic Achievement Zone</h1>
+        <div class="floating-elements"></div>
+    </section>
+
+    <section class="portal-container">
+        <div class="portal-card">
+            <div class="portal-content">
+                <h2>🏆 Hackathon Hero</h2>
+                <p>Single-handedly conquered the Capital One Challenge!</p>
+                <div class="achievement-counter">Defeated <span class="count">5</span> teams</div>
             </div>
-        </header>
+        </div>
 
-    <!-- Main -->
-    <section id="main" class="wrapper">
-        <div class="inner">
-            <header class="major">
-                <h1>Learn More</h1>
-                <b>
-                <p>Find out more about my journey, experiences, and the motivation behind my work.</p>
-                </b>
-            </header>
-            <section>
-                <h2>My Journey</h2>
-                <p>My passion for computer science began when I first learned to code in high school. I was fascinated by
-                    the endless possibilities that technology offered, and I quickly realized that I wanted to pursue a
-                    career in this field. I went on to study Computer Science at Nottingham Trent University, where I
-                    deepened my knowledge in various programming languages and technologies.</p>
-            </section>
-            <section>
-                <h2>Experiences and Achievements</h2>
-                <p>During my time at university, I completed several courses, where I gained hands-on experience in software
-                    development and project management. Additionally, I have worked on numerous personal and group projects,
-                    which have allowed me to further develop my skills in web development, data analysis, and artificial
-                    intelligence. Some of my most notable achievements include winning the 2022 Discord Hackathon.</p>
-                </sectiection>
-                <h2>Motivation</h2>
-                <p>My motivation to continually grow and learn as a computer scientist comes from my desire to create
-                    innovative solutions to real-world problems. I believe that technology has the power to transform lives
-                    and positively impact the world, and I am driven by the opportunity to contribute to this process. By
-                    staying up-to-date with the latest industry trends and continually expanding my skill set, I hope to
-                    make a meaningful impact through my work and inspire others to do the same.</p>
-            </section>
+        <div class="portal-card">
+            <div class="portal-content">
+                <h2>🧠 Neural Ninja</h2>
+                <p>Created NTSC-BMP: The future of compression!</p>
+                <div class="tech-stack-icons">
+                    <i class="fas fa-brain"></i>
+                    <i class="fas fa-microchip"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="portal-card">
+            <div class="portal-content">
+                <h2>⚡ Code Warrior</h2>
+                <p>From high school hobby to professional magic!</p>
+                <div class="code-animation">
+                    <span class="typing-text"></span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="footer" class="site-footer">
-        <div class="container">
+    <div class="achievement-galaxy">
+        <h2>Interactive Achievements</h2>
+        <div id="achievementCanvas"></div>
+    </div>
+</main>
 
-            <ul class="footer-links">
-                <li>&copy; All rights reserved.</li>
-                <li>Design: <a href="https://github.com/MuneebKhan11">Muhammad Khan</a></li>
-            </ul>
-        </div>
-    </footer>
+<script>
+    function createStars() {
+        const background = document.querySelector('.space-background');
+        for(let i = 0; i < 200; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.width = Math.random() * 3 + 'px';
+            star.style.height = star.style.width;
+            star.style.left = Math.random() * 100 + 'vw';
+            star.style.top = Math.random() * 100 + 'vh';
+            star.style.animationDuration = (Math.random() * 3 + 1) + 's';
+            background.appendChild(star);
+        }
+    }
 
+    function createFloatingElements() {
+        const container = document.querySelector('.floating-elements');
+        const elements = ['💫', '⭐', '🌟', '✨', '💻', '🎮'];
+        for(let i = 0; i < 20; i++) {
+            const element = document.createElement('div');
+            element.className = 'cosmic-element';
+            element.textContent = elements[Math.floor(Math.random() * elements.length)];
+            element.style.left = Math.random() * 100 + 'vw';
+            element.style.top = Math.random() * 100 + 'vh';
+
+            // Set transform values directly in the style
+            const translateX = (Math.random() * 200 - 100) + 'px';
+            const translateY = (Math.random() * 200 - 100) + 'px';
+            element.style.transform = `translate(${translateX}, ${translateY})`;
+
+            container.appendChild(element);
+        }
+    }
+
+    function updateRocketProgress() {
+        const rocket = document.querySelector('.rocket');
+        window.addEventListener('scroll', () => {
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            rocket.style.top = `${scrollPercent}%`;
+        });
+    }
+
+    function initPortalCards() {
+        document.querySelectorAll('.portal-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const angleX = (y - centerY) / 20;
+                const angleY = (centerX - x) / 20;
+
+                card.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.1)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'rotateX(0) rotateY(0) scale(1)';
+            });
+        });
+    }
+
+    function initMascot() {
+        const mascot = document.getElementById('mascot');
+        mascot.addEventListener('click', () => {
+            mascot.style.transform = 'scale(1.3) rotate(360deg)';
+            setTimeout(() => {
+                mascot.style.transform = 'scale(1) rotate(0)';
+            }, 1000);
+            playSpaceSound();
+        });
+    }
+
+    function playSpaceSound() {
+        const audio = new Audio('images/space.mp3');
+        audio.volume = 0.3;
+        audio.play().catch(() => {});
+    }
+
+    function initTypeWriter() {
+        const text = "console.log('Hello Universe!')";
+        let index = 0;
+        const typingText = document.querySelector('.typing-text');
+
+        function type() {
+            if (index < text.length) {
+                typingText.textContent += text.charAt(index);
+                index++;
+                setTimeout(type, 100);
+            } else {
+                setTimeout(() => {
+                    typingText.textContent = '';
+                    index = 0;
+                    type();
+                }, 2000);
+            }
+        }
+        type();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        createStars();
+        createFloatingElements();
+        updateRocketProgress();
+        initPortalCards();
+        initMascot();
+        initTypeWriter();
+    });
+
+    let isExploding = false;
+    document.addEventListener('click', (e) => {
+        if (!isExploding) {
+            createExplosion(e.clientX, e.clientY);
+            isExploding = true;
+            setTimeout(() => isExploding = false, 100);
+        }
+    });
+
+    function createExplosion(x, y) {
+        const particles = 15;
+        const container = document.querySelector('.particle-overlay');
+
+        for(let i = 0; i < particles; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = x + 'px';
+            particle.style.top = y + 'px';
+
+            const angle = (i / particles) * Math.PI * 2;
+            const velocity = 5;
+            const vx = Math.cos(angle) * velocity;
+            const vy = Math.sin(angle) * velocity;
+
+            particle.style.animation = `particle 1s forwards`;
+            particle.style.setProperty('--vx', vx + 'px');
+            particle.style.setProperty('--vy', vy + 'px');
+
+            container.appendChild(particle);
+            setTimeout(() => particle.remove(), 1000);
+        }
+    }
+</script>
 </body>
-
 </html>
